@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Guessing Game</title>
+</head>
+<body>
+</body>
+<script>
+var colors = ["blue", "cyan", "gold", "gray", "green", "magenta","organe","red","white","yellow"];
+function do_game() {
+  var correct_color = colors[Math.floor(Math.random()*colors.length)];
+  <!--alert(correct_color);-->
+  var guess = prompt("I am thinking of one of these colors:\n\nblue,cyan,gold,gray,green,magenta,organe,red,white,yellow\n\nWhat color am I thinking of?");
+  while(guess!=correct_color) {
+      var guess2 = prompt("I am thinking of one of these colors:\n\nblue,cyan,gold,gray,green,magenta,organe,red,white,yellow\n\nWhat color am I thinking of?");
+      guess = guess2;
+    }
+  }
+  do_game();
+</script>
+</html>
